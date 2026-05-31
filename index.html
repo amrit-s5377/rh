@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roosevelt Hotel — Williston, North Dakota</title>
+  <meta name="description" content="Roosevelt Hotel — Williston's landmark hotel, Trademark Collection by Wyndham. Cajun dining at Roux, free breakfast, and warm hospitality at 1001 24th ST W, Williston, ND 58801." />
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="preload" as="image" href="https://res.cloudinary.com/djcgfqesd/image/upload/v1780225837/hero_image_outside_view_wider_tiknyl.avif" type="image/avif" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <h1 class="loader-title">Roosevelt Hotel</h1>
+      <p class="loader-subtitle">WILLISTON, NORTH DAKOTA</p>
+      <div class="loader-bar-track">
+        <div id="loader-bar" class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE WRAPPER -->
+  <div id="site" class="site-hidden">
+
+    <!-- NAVBAR -->
+    <header id="navbar" class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Roosevelt</a>
+
+        <nav class="nav-links" id="nav-links">
+          <a href="rooms.html" class="nav-link">Rooms</a>
+          <a href="dining.html" class="nav-link">Dining</a>
+          <a href="amenities.html" class="nav-link">Amenities</a>
+          <a href="meetings.html" class="nav-link">Meetings</a>
+          <a href="property.html" class="nav-link">Property</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="nav-reserve">Reserve Now</a>
+
+        <button class="nav-hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="rooms.html" onclick="closeMobile()">Rooms</a>
+        <a href="dining.html" onclick="closeMobile()">Dining</a>
+        <a href="amenities.html" onclick="closeMobile()">Amenities</a>
+        <a href="meetings.html" onclick="closeMobile()">Meetings</a>
+        <a href="property.html" onclick="closeMobile()">Property</a>
+        <a href="contact.html" onclick="closeMobile()">Contact</a>
+        <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="mobile-reserve">Reserve Now</a>
+      </nav>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-bg" id="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge js-fade-up">Trademark Collection by Wyndham</div>
+        <h1 class="hero-title js-fade-up">
+          Where History<br>Meets <em>Hospitality</em>
+        </h1>
+        <p class="hero-subtitle js-fade-up">
+          Williston's Landmark Hotel — North Dakota
+        </p>
+        <div class="hero-ctas js-fade-up">
+          <a href="property.html" class="btn-primary">Explore Property</a>
+          <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="btn-arrow">
+            Book Your Stay
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-stats js-fade-up">
+        <div class="hero-stat"><span class="stat-val">$79</span><span class="stat-label">From / Night</span></div>
+        <div class="hero-stat"><span class="stat-val">3:00 PM</span><span class="stat-label">Check-in</span></div>
+        <div class="hero-stat"><span class="stat-val">11:00 AM</span><span class="stat-label">Check-out</span></div>
+        <div class="hero-stat"><span class="stat-val">4.0 ★</span><span class="stat-label">Guest Rating</span></div>
+      </div>
+      <div class="scroll-hint js-fade-up">
+        <span class="scroll-text">Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- STICKY ANCHOR NAV (below hero stats) -->
+    <nav class="anchor-nav" id="anchorNav" aria-label="Page sections">
+      <div class="anchor-nav-inner">
+        <a href="#about" class="anchor-link"><span class="anchor-index">01</span> About</a>
+        <a href="#rooms" class="anchor-link"><span class="anchor-index">02</span> Rooms</a>
+        <a href="#dining" class="anchor-link"><span class="anchor-index">03</span> Dining</a>
+        <a href="#amenities" class="anchor-link"><span class="anchor-index">04</span> Amenities</a>
+        <a href="#reserve" class="anchor-link"><span class="anchor-index">05</span> Reserve</a>
+        <a href="#reviews" class="anchor-link"><span class="anchor-index">06</span> Reviews</a>
+        <a href="#location" class="anchor-link"><span class="anchor-index">07</span> Location</a>
+      </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image js-reveal-left">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1000&q=85" alt="Roosevelt Hotel exterior" loading="lazy" />
+            <div class="about-tag">
+              <span class="tag-label">Welcome to</span>
+              <span class="tag-value">Williston, ND</span>
+            </div>
+          </div>
+          <div class="about-text js-reveal-right">
+            <span class="eyebrow">Our Story</span>
+            <h2 class="section-heading">A Landmark in <em>Williston</em></h2>
+            <p class="body-text">
+              The Roosevelt Hotel is a welcoming retreat in the heart of Williston, North Dakota — a Trademark Collection by Wyndham property that pairs the warmth of American heritage with the comforts of contemporary travel. From the moment you arrive, you're cared for like family.
+            </p>
+            <p class="body-text">
+              Situated at 1001 24th Street West, just off US-2, the hotel puts you minutes from the Williston Basin energy corridor and a short drive from Lake Sakakawea, the Missouri River, and the rugged badlands of Theodore Roosevelt National Park. Whether you're here for work in the Bakken or exploring western North Dakota, the Roosevelt is your home away from home.
+            </p>
+            <div class="gold-rule"></div>
+            <div class="stats-grid">
+              <div class="stat-box">
+                <span class="stat-number" data-target="11" data-suffix=" mi">0 mi</span>
+                <span class="stat-label-sm">To Williston Airport (XWA)</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+                <span class="stat-label-sm">Smoke-Free Property</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number" data-target="4" data-suffix="★" data-decimal="1">0★</span>
+                <span class="stat-label-sm">Guest Rating</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number" data-target="24" data-suffix="/7">0/7</span>
+                <span class="stat-label-sm">Front Desk &amp; Fitness</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROOMS -->
+    <section id="rooms" class="rooms">
+      <div class="container">
+        <div class="section-header js-reveal-up">
+          <span class="eyebrow">Accommodations</span>
+          <h2 class="section-heading">Your Sanctuary <em>Awaits</em></h2>
+        </div>
+      </div>
+      <div class="rooms-scroll">
+        <div class="rooms-track" id="rooms-track">
+
+          <div class="room-card js-reveal-right">
+            <div class="room-img-wrap">
+              <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=85" alt="Queen Room" loading="lazy" />
+              <span class="room-badge">Most Popular</span>
+            </div>
+            <div class="room-body">
+              <span class="room-type">Standard</span>
+              <h3 class="room-name">Queen Room</h3>
+              <p class="room-desc">Queen bed, flat-screen HDTV, work desk, microwave, mini-fridge, coffee maker, and complimentary high-speed WiFi.</p>
+              <div class="room-footer-row">
+                <span class="room-price">$79<small>/night</small></span>
+                <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="btn-sm-outline">Book Room</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="room-card js-reveal-right">
+            <div class="room-img-wrap">
+              <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=85" alt="Double Queen Room" loading="lazy" />
+            </div>
+            <div class="room-body">
+              <span class="room-type">Family</span>
+              <h3 class="room-name">Double Queen</h3>
+              <p class="room-desc">Two queen beds, ideal for families or colleagues. Work desk, microwave, mini-fridge, and free high-speed WiFi throughout.</p>
+              <div class="room-footer-row">
+                <span class="room-price">$99<small>/night</small></span>
+                <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="btn-sm-outline">Book Room</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="room-card js-reveal-right">
+            <div class="room-img-wrap">
+              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=85" alt="King Suite" loading="lazy" />
+              <span class="room-badge">Suite</span>
+            </div>
+            <div class="room-body">
+              <span class="room-type">Upgrade</span>
+              <h3 class="room-name">King Suite</h3>
+              <p class="room-desc">King bed with a separate sitting area, upgraded bath amenities, flat-screen HDTV, and generous space to unwind.</p>
+              <div class="room-footer-row">
+                <span class="room-price">$129<small>/night</small></span>
+                <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="btn-sm-outline">Book Room</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="room-card js-reveal-right">
+            <div class="room-img-wrap">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=85" alt="Extended-Stay Kitchenette Suite" loading="lazy" />
+              <span class="room-badge">Pet Friendly</span>
+            </div>
+            <div class="room-body">
+              <span class="room-type">Extended Stay</span>
+              <h3 class="room-name">Kitchenette Suite</h3>
+              <p class="room-desc">Built for longer stays — kitchenette, extra storage, and all the comforts of home. Pet-friendly rooms available.</p>
+              <div class="room-footer-row">
+                <span class="room-price">Call<small>for rate</small></span>
+                <a href="tel:+17017740424" class="btn-sm-outline">Call Direct</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DINING -->
+    <section id="dining" class="dining">
+      <div class="container">
+        <div class="dining-grid">
+          <div class="dining-img js-reveal-left">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1000&q=85" alt="Roux restaurant dining" loading="lazy" />
+            <span class="dining-stamp">Roux</span>
+          </div>
+          <div class="js-reveal-right">
+            <span class="eyebrow">Dine With Us</span>
+            <h2 class="section-heading">Cajun Soul at <em>Roux</em></h2>
+            <p class="body-text">
+              Our on-site restaurant, Roux, brings authentic Cajun &amp; Creole cooking to the northern plains — soulful gumbo, jambalaya, and Southern comfort served for lunch and dinner. Start your morning with a complimentary hot breakfast buffet, and unwind in the evening at the bar.
+            </p>
+            <ul class="check-list">
+              <li>Complimentary hot breakfast buffet every morning</li>
+              <li>Cajun &amp; Creole lunch and dinner at Roux</li>
+              <li>Full-service bar &amp; evening manager's reception</li>
+              <li>In-room microwave, mini-fridge &amp; coffee maker</li>
+            </ul>
+            <a href="dining.html" class="btn-outline-gold">Explore Dining</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section id="amenities" class="amenities">
+      <div class="container">
+        <div class="section-header js-reveal-up">
+          <span class="eyebrow">Hotel Amenities</span>
+          <h2 class="section-heading">Curated for <em>Comfort</em></h2>
+        </div>
+        <div class="amenities-grid">
+
+          <div class="amenity-card js-stagger">
+            <div class="amenity-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <h3 class="amenity-name">Free Breakfast</h3>
+            <p class="amenity-desc">A complimentary hot breakfast buffet with fresh coffee to start every morning right — included with your stay.</p>
+          </div>
+
+          <div class="amenity-card js-stagger">
+            <div class="amenity-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+            </div>
+            <h3 class="amenity-name">Free WiFi</h3>
+            <p class="amenity-desc">High-speed wireless internet throughout all rooms and common areas, complimentary for every guest.</p>
+          </div>
+
+          <div class="amenity-card js-stagger">
+            <div class="amenity-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="amenity-name">EV Charging</h3>
+            <p class="amenity-desc">On-site electric vehicle charging stations available, making the Roosevelt a smart choice for modern travelers.</p>
+          </div>
+
+          <div class="amenity-card js-stagger">
+            <div class="amenity-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            </div>
+            <h3 class="amenity-name">Restaurant &amp; Bar</h3>
+            <p class="amenity-desc">Cajun &amp; Creole cuisine and handcrafted drinks at Roux, our on-site restaurant and bar, open daily.</p>
+          </div>
+
+          <div class="amenity-card js-stagger">
+            <div class="amenity-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.5 6.5h11v11h-11z"/><path d="M3 10h3M3 14h3M18 10h3M18 14h3M10 3v3M14 3v3M10 18v3M14 18v3"/></svg>
+            </div>
+            <h3 class="amenity-name">Fitness Center</h3>
+            <p class="amenity-desc">Stay on routine in our on-site gym, with cardio and strength equipment available throughout your stay.</p>
+          </div>
+
+          <div class="amenity-card js-stagger">
+            <div class="amenity-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="amenity-name">Meeting Space</h3>
+            <p class="amenity-desc">400 sq ft of flexible event space for up to 40 guests — ideal for corporate gatherings and private functions.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVE / BOOKING EXPLAINER -->
+    <section id="reserve" class="reserve">
+      <div class="container">
+        <div class="section-header js-reveal-up" style="text-align:center;max-width:640px;margin-left:auto;margin-right:auto;">
+          <span class="eyebrow">Best Way to Book</span>
+          <h2 class="section-heading">Reserve <em>Your Stay</em></h2>
+        </div>
+        <div class="reserve-grid">
+
+          <div class="reserve-card js-stagger">
+            <div class="reserve-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Online via Wyndham</h3>
+            <p>Secure instant confirmation and earn Wyndham Rewards points. Best for nightly reservations.</p>
+            <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="reserve-cta">Check Availability
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5"/></svg>
+            </a>
+          </div>
+
+          <div class="reserve-card reserve-card--featured js-stagger">
+            <div class="reserve-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3>Call Our Front Desk</h3>
+            <p>Speak with our team for weekly, monthly, corporate, and crew-block rates. Available around the clock.</p>
+            <a href="tel:+17017740424" class="reserve-cta reserve-cta--solid">(701) 774-0424</a>
+          </div>
+
+          <div class="reserve-card js-stagger">
+            <div class="reserve-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3>Group &amp; Corporate</h3>
+            <p>For crew blocks, direct billing, and long-term workforce housing, send us an enquiry and we'll respond fast.</p>
+            <a href="contact.html" class="reserve-cta">Send Enquiry
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="reviews">
+      <div class="container">
+        <div class="section-header js-reveal-up">
+          <span class="eyebrow">Guest Reviews</span>
+          <h2 class="section-heading">What Our Guests <em>Say</em></h2>
+        </div>
+        <div class="carousel-wrap js-reveal-up">
+          <div class="carousel-track" id="carousel-track">
+
+            <div class="review-slide">
+              <div class="review-card">
+                <div class="review-quote-mark">"</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">"A comfortable, friendly stay in Williston. The breakfast was hot and fresh every morning and the staff went out of their way to help. The Cajun food at Roux was a delicious surprise this far north."</p>
+                <div class="review-footer">
+                  <div>
+                    <span class="review-name">Sarah M.</span>
+                    <span class="review-date">March 2024</span>
+                  </div>
+                  <span class="review-platform">Wyndham Rewards Member</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-slide">
+              <div class="review-card">
+                <div class="review-quote-mark">"</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <p class="review-text">"Great value for the area. Clean room, comfortable bed, and free parking right out front. Convenient for work in the Bakken — I'll be staying here again on my next rotation."</p>
+                <div class="review-footer">
+                  <div>
+                    <span class="review-name">James T.</span>
+                    <span class="review-date">February 2024</span>
+                  </div>
+                  <span class="review-platform">Google Review</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-slide">
+              <div class="review-card">
+                <div class="review-quote-mark">"</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">"Friendly front desk, easy parking, and the EV charger was a thoughtful touch. The location off US-2 made day trips to Lake Sakakawea simple. One of the better stays I've had in the region."</p>
+                <div class="review-footer">
+                  <div>
+                    <span class="review-name">Michelle K.</span>
+                    <span class="review-date">January 2024</span>
+                  </div>
+                  <span class="review-platform">TripAdvisor</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-slide">
+              <div class="review-card">
+                <div class="review-quote-mark">"</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <p class="review-text">"Clean, quiet, and conveniently located. Check-in was quick and the room was spacious. The gym had what I needed and breakfast was a great way to start the day. Will return on my next trip to Williston."</p>
+                <div class="review-footer">
+                  <div>
+                    <span class="review-name">Robert D.</span>
+                    <span class="review-date">December 2023</span>
+                  </div>
+                  <span class="review-platform">Verified Guest</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-slide">
+              <div class="review-card">
+                <div class="review-quote-mark">"</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">"Warm hospitality and a relaxed atmosphere. The bar was a nice place to wind down after a long day, and the team made our group booking effortless. A genuinely welcoming hotel."</p>
+                <div class="review-footer">
+                  <div>
+                    <span class="review-name">Patricia L.</span>
+                    <span class="review-date">November 2023</span>
+                  </div>
+                  <span class="review-platform">Wyndham Rewards Member</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prev-btn" onclick="carouselPrev()" aria-label="Previous">&#8592;</button>
+          <div class="carousel-dots" id="carousel-dots"></div>
+          <button class="carousel-btn" id="next-btn" onclick="carouselNext()" aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="location">
+      <div class="container">
+        <div class="section-header js-reveal-up">
+          <span class="eyebrow">Where to Find Us</span>
+          <h2 class="section-heading">Find Us in <em>Williston</em></h2>
+        </div>
+        <div class="location-grid">
+          <div class="location-info js-reveal-left">
+            <div class="loc-detail">
+              <span class="loc-label">Address</span>
+              <span class="loc-value">1001 24th ST W<br>Williston, North Dakota 58801</span>
+            </div>
+            <div class="loc-rule"></div>
+            <div class="loc-detail">
+              <span class="loc-label">Phone</span>
+              <span class="loc-value"><a href="tel:+17017740424">+1 701-774-0424</a></span>
+            </div>
+            <div class="loc-detail">
+              <span class="loc-label">Check-in / Check-out</span>
+              <span class="loc-value">Check-in from 3:00 PM<br>Check-out by 11:00 AM</span>
+            </div>
+            <div class="loc-rule"></div>
+            <div class="loc-detail">
+              <span class="loc-label">Nearby Landmarks</span>
+              <ul class="loc-list">
+                <li>Williston Basin International Airport (XWA) — 11 mi</li>
+                <li>Lake Sakakawea — scenic day trip</li>
+                <li>Missouri &amp; Yellowstone Confluence — 23 mi</li>
+                <li>Fort Union Trading Post — 25 mi</li>
+                <li>Theodore Roosevelt National Park — 70 mi</li>
+              </ul>
+            </div>
+            <a href="https://maps.google.com/?q=1001+24th+St+W,+Williston,+ND+58801" target="_blank" rel="noopener" class="btn-outline-gold">Get Directions</a>
+          </div>
+          <div class="location-map js-reveal-right">
+            <iframe
+              src="https://maps.google.com/maps?q=1001+24th+St+W,+Williston,+ND+58801&output=embed"
+              title="Roosevelt Hotel Location"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">Roosevelt</a>
+            <span class="footer-sub">Trademark Collection by Wyndham</span>
+            <p class="footer-tagline">"Where history meets hospitality — Williston's landmark hotel."</p>
+            <div class="footer-socials">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-title">Explore</span>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="rooms.html">Rooms</a></li>
+              <li><a href="dining.html">Dining</a></li>
+              <li><a href="amenities.html">Amenities</a></li>
+              <li><a href="meetings.html">Meetings</a></li>
+              <li><a href="property.html">Property Details</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-title">Information</span>
+            <ul>
+              <li><a href="#reviews">Guest Reviews</a></li>
+              <li><a href="#location">Location &amp; Map</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener">Wyndham Rewards</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-title">Contact</span>
+            <div class="contact-item">
+              <span class="contact-label">Address</span>
+              <span class="contact-value">1001 24th ST W, Williston, ND 58801</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value"><a href="tel:+17017740424">+1 701-774-0424</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Hours</span>
+              <span class="contact-value">Check-in 3PM / Check-out 11AM</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">&copy; <span id="year"></span> Roosevelt Hotel. Trademark Collection by Wyndham. All rights reserved.</p>
+          <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="footer-reserve">Reserve Your Stay</a>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /site -->
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" onclick="scrollToTop()">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- GSAP from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
