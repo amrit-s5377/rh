@@ -1454,11 +1454,13 @@ section[id],
 =========================== */
 .page-hero {
   position: relative;
-  min-height: 52vh;
+  min-height: 60vh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  margin-top: var(--nav-h);
+  /* no top margin — the hero fills behind the fixed navbar so the
+     transparent navbar's light links stay readable over the dark image */
+  padding-top: var(--nav-h);
 }
 .page-hero-bg {
   position: absolute;
