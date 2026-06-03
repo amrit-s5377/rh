@@ -3,12 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ═══ SEO META TAGS ═══ -->
   <title>Meetings &amp; Events — Roosevelt Hotel, Williston ND</title>
-  <meta name="description" content="Host your meeting or event at the Roosevelt Hotel, Williston ND — 400 sq ft of flexible event space for up to 40 guests, with catering from Roux." />
+  <meta name="description" content="Host your meeting or event at the Roosevelt Hotel, Williston ND — 400 sq ft of flexible event space for up to 40 guests, with on-site catering." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://hotelwilliston.com/meetings" />
+
+  <!-- Geo (TODO: verify exact GPS coordinates for 1001 24th St W, Williston ND) -->
+  <meta name="geo.region" content="US-ND" />
+  <meta name="geo.placename" content="Williston, North Dakota" />
+  <meta name="geo.position" content="48.1614;-103.6469" />
+  <meta name="ICBM" content="48.1614, -103.6469" />
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Roosevelt Hotel" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hotelwilliston.com/meetings" />
+  <meta property="og:title" content="Meetings &amp; Events — Roosevelt Hotel, Williston ND" />
+  <meta property="og:description" content="400 sq ft of flexible event space for up to 40 guests, with on-site catering, at the Roosevelt Hotel, Williston ND." />
+  <meta property="og:image" content="https://res.cloudinary.com/djcgfqesd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1780503426/hero_image_outside_view_wider_zg9quq.avif" />
+  <meta property="og:image:alt" content="Roosevelt Hotel, Williston ND — meeting space" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meetings &amp; Events — Roosevelt Hotel, Williston ND" />
+  <meta name="twitter:description" content="400 sq ft of flexible event space for up to 40 guests, with on-site catering, at the Roosevelt Hotel, Williston ND." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/djcgfqesd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1780503426/hero_image_outside_view_wider_zg9quq.avif" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#7a1d2b">
   <link rel="stylesheet" href="style.css">
+
+  <!-- ═══ STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hotelwilliston.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Meetings & Events", "item": "https://hotelwilliston.com/meetings" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How large is the meeting space at the Roosevelt Hotel in Williston?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The Roosevelt Hotel, Williston ND, offers 400 square feet of flexible event space that seats up to 40 guests — suitable for meetings, training sessions, and small events." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is catering available for events at the Roosevelt Hotel?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. On-site catering can be arranged for meetings and events at the Roosevelt Hotel, Williston ND. Contact us at +1 701-774-0424 to discuss catering options for your event." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book the meeting space at the Roosevelt Hotel?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To book the meeting space, call the Roosevelt Hotel at +1 701-774-0424. Provide your event date, expected number of attendees, and any catering or setup requirements, and our team will confirm availability." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many people does the event space hold?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The event space at the Roosevelt Hotel, Williston ND, accommodates up to 40 guests, depending on the seating arrangement. The room can be configured for presentations, training, or group dining." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -25,7 +99,7 @@
     <!-- NAVBAR -->
     <header id="navbar" class="navbar">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Roosevelt</a>
+        <a href="index.html" class="nav-logo" aria-label="Merlin Group Hotels — Roosevelt Hotel"><img src="assets/merlin-logo.png" alt="Merlin Group Hotels" class="nav-logo-img"></a>
         <nav class="nav-links" id="nav-links">
           <a href="rooms.html" class="nav-link">Rooms</a>
           <a href="dining.html" class="nav-link">Dining</a>
@@ -74,7 +148,7 @@
     <section id="room" class="sec">
       <div class="container">
         <div class="split">
-          <div class="split-img js-reveal-left"><img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=1000&q=85" alt="Meeting room" loading="lazy" /></div>
+          <div class="split-img js-reveal-left"><img src="https://res.cloudinary.com/djcgfqesd/image/upload/w_1000,f_auto,q_auto/v1780503426/buisiness_facilities_lignip.jpg" alt="Meeting room and business facilities" loading="lazy" /></div>
           <div class="js-reveal-right">
             <span class="eyebrow">The Space</span>
             <h2 class="section-heading" style="margin-bottom:1rem;">A Flexible <em>Meeting Room</em></h2>
@@ -107,11 +181,11 @@
         <div class="split">
           <div class="js-reveal-left">
             <span class="eyebrow">From Our Kitchen</span>
-            <h2 class="section-heading" style="margin-bottom:1rem;">Catering by <em>Roux</em></h2>
-            <p class="body-text">Bring the flavor of Roux to your event with on-site catering — from breakfast spreads to Cajun-inspired lunches. Placeholder copy to be replaced.</p>
+            <h2 class="section-heading" style="margin-bottom:1rem;">On-Site <em>Catering</em></h2>
+            <p class="body-text">Keep your event running smoothly with on-site catering — from morning spreads to working lunches and breaks. Placeholder copy to be replaced.</p>
             <ul class="check-list">
               <li>Breakfast, lunch &amp; break service</li>
-              <li>Cajun &amp; Creole menu options</li>
+              <li>Flexible menu options</li>
               <li>Beverage service available</li>
             </ul>
           </div>
@@ -136,7 +210,7 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="index.html" class="footer-logo">Roosevelt</a>
+            <a href="index.html" class="footer-logo"><img src="assets/merlin-logo.png" alt="Merlin Group Hotels" class="footer-logo-img"></a>
             <span class="footer-sub">Trademark Collection by Wyndham</span>
             <p class="footer-tagline">"Where history meets hospitality — Williston's landmark hotel."</p>
             <div class="footer-socials">

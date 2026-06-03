@@ -3,12 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ═══ SEO META TAGS ═══ -->
   <title>Amenities — Roosevelt Hotel, Williston ND</title>
   <meta name="description" content="Amenities at the Roosevelt Hotel, Williston ND — free breakfast &amp; WiFi, fitness center, EV charging, business center, meeting space, pet-friendly rooms, and more." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://hotelwilliston.com/amenities" />
+
+  <!-- Geo (TODO: verify exact GPS coordinates for 1001 24th St W, Williston ND) -->
+  <meta name="geo.region" content="US-ND" />
+  <meta name="geo.placename" content="Williston, North Dakota" />
+  <meta name="geo.position" content="48.1614;-103.6469" />
+  <meta name="ICBM" content="48.1614, -103.6469" />
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Roosevelt Hotel" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hotelwilliston.com/amenities" />
+  <meta property="og:title" content="Amenities — Roosevelt Hotel, Williston ND" />
+  <meta property="og:description" content="Free breakfast &amp; WiFi, fitness center, EV charging, business center, meeting space, and pet-friendly rooms at the Roosevelt Hotel, Williston ND." />
+  <meta property="og:image" content="https://res.cloudinary.com/djcgfqesd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1780503426/hero_image_outside_view_wider_zg9quq.avif" />
+  <meta property="og:image:alt" content="Roosevelt Hotel, Williston ND — amenities" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Amenities — Roosevelt Hotel, Williston ND" />
+  <meta name="twitter:description" content="Free breakfast &amp; WiFi, fitness center, EV charging, business center, meeting space, and pet-friendly rooms at the Roosevelt Hotel, Williston ND." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/djcgfqesd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1780503426/hero_image_outside_view_wider_zg9quq.avif" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#7a1d2b">
   <link rel="stylesheet" href="style.css">
+
+  <!-- ═══ STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hotelwilliston.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Amenities", "item": "https://hotelwilliston.com/amenities" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does the Roosevelt Hotel in Williston have free WiFi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Free high-speed WiFi is available throughout the Roosevelt Hotel, Williston ND, for all guests at no additional charge." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a fitness center at the Roosevelt Hotel?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Roosevelt Hotel, Williston ND, has an on-site fitness center available to all guests during their stay." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the Roosevelt Hotel offer EV charging?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. EV charging is available on-site at the Roosevelt Hotel, Williston ND. Contact the front desk at +1 701-774-0424 for details on availability." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the Roosevelt Hotel pet-friendly?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Roosevelt Hotel, Williston ND, offers pet-friendly rooms. A pet fee may apply — please let us know when you book and contact the front desk at +1 701-774-0424 for current pet policy details." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is parking free at the Roosevelt Hotel in Williston?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Free on-site parking is available for all guests at the Roosevelt Hotel, Williston ND." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a business center at the Roosevelt Hotel?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Roosevelt Hotel, Williston ND, has an on-site business center, along with guest laundry and a 400 sq ft meeting space for events of up to 40 guests." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -25,7 +109,7 @@
     <!-- NAVBAR -->
     <header id="navbar" class="navbar">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Roosevelt</a>
+        <a href="index.html" class="nav-logo" aria-label="Merlin Group Hotels — Roosevelt Hotel"><img src="assets/merlin-logo.png" alt="Merlin Group Hotels" class="nav-logo-img"></a>
         <nav class="nav-links" id="nav-links">
           <a href="rooms.html" class="nav-link">Rooms</a>
           <a href="dining.html" class="nav-link">Dining</a>
@@ -74,14 +158,19 @@
 
     <section id="wellness" class="sec">
       <div class="container">
-        <span class="eyebrow js-reveal-up">Feel Good</span>
-        <h2 class="section-heading js-reveal-up">Wellness &amp; <em>Recreation</em></h2>
-        <div class="card-grid">
-          <div class="info-card"><div class="info-card-num">01</div><h3>Fitness Center</h3><p>On-site gym with cardio and strength equipment to keep your routine on track.</p></div>
-          <div class="info-card"><div class="info-card-num">02</div><h3>Arcade / Game Room</h3><p>A relaxed space to unwind after a long day on the road or on shift.</p></div>
-          <div class="info-card"><div class="info-card-num">03</div><h3>Guest Laundry</h3><p>On-site laundry facilities — ideal for extended stays.</p></div>
+        <div class="split">
+          <div class="split-img js-reveal-left"><img src="https://res.cloudinary.com/djcgfqesd/image/upload/w_1000,f_auto,q_auto/v1780503426/fitness_centre_gym_recreation_ygs5nk.jpg" alt="On-site fitness center" loading="lazy" /></div>
+          <div class="js-reveal-right">
+            <span class="eyebrow">Feel Good</span>
+            <h2 class="section-heading" style="margin-bottom:1rem;">Wellness &amp; <em>Recreation</em></h2>
+            <p class="body-text">Stay on routine with our on-site fitness center, unwind in the game room, and keep up with the essentials thanks to guest laundry — all on-site during your stay.</p>
+            <ul class="check-list">
+              <li>On-site gym — cardio &amp; strength equipment</li>
+              <li>Arcade / game room to unwind</li>
+              <li>Guest laundry facilities</li>
+            </ul>
+          </div>
         </div>
-        <span class="mock-note">Mockup section — details &amp; photos coming soon</span>
       </div>
     </section>
 
@@ -104,7 +193,7 @@
         <div class="card-grid">
           <div class="info-card"><div class="info-card-num">01</div><h3>Free Parking</h3><p>Complimentary on-site parking right out front.</p></div>
           <div class="info-card"><div class="info-card-num">02</div><h3>EV Charging</h3><p>Electric vehicle charging stations available on-site (fee may apply).</p></div>
-          <div class="info-card"><div class="info-card-num">03</div><h3>Dining &amp; Bar</h3><p>Free breakfast buffet, Cajun/Creole dining at Roux, and a full bar.</p></div>
+          <div class="info-card"><div class="info-card-num">03</div><h3>Free Breakfast</h3><p>Complimentary hot breakfast buffet and fresh coffee every morning.</p></div>
         </div>
       </div>
     </section>
@@ -112,7 +201,7 @@
     <section id="business" class="sec sec--alt">
       <div class="container">
         <div class="split">
-          <div class="split-img js-reveal-left"><img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=1000&q=85" alt="Business meeting space" loading="lazy" /></div>
+          <div class="split-img js-reveal-left"><img src="https://res.cloudinary.com/djcgfqesd/image/upload/w_1000,f_auto,q_auto/v1780503426/buisiness_facilities_lignip.jpg" alt="Business center and meeting facilities" loading="lazy" /></div>
           <div class="js-reveal-right">
             <span class="eyebrow">Work &amp; Gather</span>
             <h2 class="section-heading" style="margin-bottom:1rem;">Business &amp; <em>Events</em></h2>
@@ -120,7 +209,7 @@
             <ul class="check-list">
               <li>Business center on-site</li>
               <li>400 sq ft meeting room — up to 40 guests</li>
-              <li>Catering available from Roux</li>
+              <li>On-site catering available</li>
             </ul>
             <a href="meetings.html" class="btn-outline-gold">See Meetings &amp; Events</a>
           </div>
@@ -152,7 +241,7 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="index.html" class="footer-logo">Roosevelt</a>
+            <a href="index.html" class="footer-logo"><img src="assets/merlin-logo.png" alt="Merlin Group Hotels" class="footer-logo-img"></a>
             <span class="footer-sub">Trademark Collection by Wyndham</span>
             <p class="footer-tagline">"Where history meets hospitality — Williston's landmark hotel."</p>
             <div class="footer-socials">

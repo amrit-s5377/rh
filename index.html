@@ -3,14 +3,163 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ═══ SEO META TAGS ═══ -->
   <title>Roosevelt Hotel — Williston, North Dakota</title>
-  <meta name="description" content="Roosevelt Hotel — Williston's landmark hotel, Trademark Collection by Wyndham. Cajun dining at Roux, free breakfast, and warm hospitality at 1001 24th ST W, Williston, ND 58801." />
+  <meta name="description" content="Roosevelt Hotel — Williston's landmark hotel, Trademark Collection by Wyndham. Complimentary hot breakfast and warm hospitality at 1001 24th ST W, Williston, ND 58801." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://hotelwilliston.com/" />
+
+  <!-- Geo (TODO: verify exact GPS coordinates for 1001 24th St W, Williston ND) -->
+  <meta name="geo.region" content="US-ND" />
+  <meta name="geo.placename" content="Williston, North Dakota" />
+  <meta name="geo.position" content="48.1614;-103.6469" />
+  <meta name="ICBM" content="48.1614, -103.6469" />
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Roosevelt Hotel" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hotelwilliston.com/" />
+  <meta property="og:title" content="Roosevelt Hotel — Williston, North Dakota" />
+  <meta property="og:description" content="Williston's landmark hotel, Trademark Collection by Wyndham. Complimentary hot breakfast and warm hospitality at 1001 24th ST W, Williston, ND 58801." />
+  <meta property="og:image" content="https://res.cloudinary.com/djcgfqesd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1780503426/hero_image_outside_view_wider_zg9quq.avif" />
+  <meta property="og:image:alt" content="Roosevelt Hotel, Williston ND — exterior" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roosevelt Hotel — Williston, North Dakota" />
+  <meta name="twitter:description" content="Williston's landmark hotel, Trademark Collection by Wyndham. Complimentary hot breakfast and warm hospitality at 1001 24th ST W, Williston, ND 58801." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/djcgfqesd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1780503426/hero_image_outside_view_wider_zg9quq.avif" />
+
   <link rel="preconnect" href="https://res.cloudinary.com">
-  <link rel="preload" as="image" href="https://res.cloudinary.com/djcgfqesd/image/upload/v1780225837/hero_image_outside_view_wider_tiknyl.avif" type="image/avif" fetchpriority="high">
+  <link rel="preload" as="image" href="https://res.cloudinary.com/djcgfqesd/image/upload/v1780503426/hero_image_outside_view_wider_zg9quq.avif" type="image/avif" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#7a1d2b">
   <link rel="stylesheet" href="style.css">
+
+  <!-- ═══ STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "@id": "https://hotelwilliston.com/#hotel",
+    "name": "Roosevelt Hotel",
+    "description": "Williston's landmark hotel, Trademark Collection by Wyndham. Complimentary hot breakfast, free WiFi, fitness center, EV charging, and warm hospitality in Williston, ND.",
+    "url": "https://hotelwilliston.com/",
+    "telephone": "+17017740424",
+    "image": "https://res.cloudinary.com/djcgfqesd/image/upload/v1780503426/hero_image_outside_view_wider_zg9quq.avif",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://res.cloudinary.com/djcgfqesd/image/upload/v1780503426/hero_image_outside_view_wider_zg9quq.avif"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1001 24th St W",
+      "addressLocality": "Williston",
+      "addressRegion": "ND",
+      "postalCode": "58801",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.1614,
+      "longitude": -103.6469
+    },
+    "checkinTime": "15:00",
+    "checkoutTime": "11:00",
+    "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card",
+    "brand": { "@type": "Brand", "name": "Trademark Collection by Wyndham" },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Wyndham Hotels & Resorts",
+      "url": "https://www.wyndhamhotels.com/"
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Free Hot Breakfast", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Fitness Center", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "EV Charging", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Business Center", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Meeting Space", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Guest Laundry", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Pet Friendly", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "24-Hour Front Desk", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Non-Smoking", "value": true }
+    ],
+    "petsAllowed": true,
+    "smokingAllowed": false,
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://hotelwilliston.com/#organization",
+    "name": "Roosevelt Hotel",
+    "url": "https://hotelwilliston.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://res.cloudinary.com/djcgfqesd/image/upload/v1780503426/hero_image_outside_view_wider_zg9quq.avif"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+17017740424",
+        "contactType": "reservations",
+        "areaServed": "US",
+        "availableLanguage": ["English"]
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1001 24th St W",
+      "addressLocality": "Williston",
+      "addressRegion": "ND",
+      "postalCode": "58801",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://hotelwilliston.com/#website",
+    "url": "https://hotelwilliston.com/",
+    "name": "Roosevelt Hotel",
+    "description": "Roosevelt Hotel, Williston ND — Trademark Collection by Wyndham.",
+    "publisher": { "@id": "https://hotelwilliston.com/#organization" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hotelwilliston.com/" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -31,7 +180,7 @@
     <!-- NAVBAR -->
     <header id="navbar" class="navbar">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Roosevelt</a>
+        <a href="index.html" class="nav-logo" aria-label="Merlin Group Hotels — Roosevelt Hotel"><img src="assets/merlin-logo.png" alt="Merlin Group Hotels" class="nav-logo-img"></a>
 
         <nav class="nav-links" id="nav-links">
           <a href="rooms.html" class="nav-link">Rooms</a>
@@ -113,7 +262,7 @@
       <div class="container">
         <div class="about-grid">
           <div class="about-image js-reveal-left">
-            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1000&q=85" alt="Roosevelt Hotel exterior" loading="lazy" />
+            <img src="https://res.cloudinary.com/djcgfqesd/image/upload/w_1000,f_auto,q_auto/v1780506159/rh_parking_lot_image_ngd428.png" alt="Roosevelt Hotel exterior and parking lot" loading="lazy" />
             <div class="about-tag">
               <span class="tag-label">Welcome to</span>
               <span class="tag-value">Williston, ND</span>
@@ -165,30 +314,14 @@
 
           <div class="room-card js-reveal-right">
             <div class="room-img-wrap">
-              <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=85" alt="Queen Room" loading="lazy" />
+              <img src="https://res.cloudinary.com/djcgfqesd/image/upload/w_800,f_auto,q_auto/v1780503429/Queen_room_with_2_queen_beds_non_smoking_kiubvg.jpg" alt="Queen room with two queen beds, non-smoking" loading="lazy" />
               <span class="room-badge">Most Popular</span>
             </div>
             <div class="room-body">
-              <span class="room-type">Standard</span>
-              <h3 class="room-name">Queen Room</h3>
-              <p class="room-desc">Queen bed, flat-screen HDTV, work desk, microwave, mini-fridge, coffee maker, and complimentary high-speed WiFi.</p>
-              <div class="room-footer-row">
-                <span class="room-price">$79<small>/night</small></span>
-                <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="btn-sm-outline">Book Room</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="room-card js-reveal-right">
-            <div class="room-img-wrap">
-              <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=85" alt="Double Queen Room" loading="lazy" />
-            </div>
-            <div class="room-body">
               <span class="room-type">Family</span>
-              <h3 class="room-name">Double Queen</h3>
-              <p class="room-desc">Two queen beds, ideal for families or colleagues. Work desk, microwave, mini-fridge, and free high-speed WiFi throughout.</p>
+              <h3 class="room-name">Two Queen Beds</h3>
+              <p class="room-desc">Two queen beds in a non-smoking room — ideal for families or colleagues. Flat-screen HDTV, work desk, microwave, mini-fridge, coffee maker, and free high-speed WiFi.</p>
               <div class="room-footer-row">
-                <span class="room-price">$99<small>/night</small></span>
                 <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="btn-sm-outline">Book Room</a>
               </div>
             </div>
@@ -196,15 +329,14 @@
 
           <div class="room-card js-reveal-right">
             <div class="room-img-wrap">
-              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=85" alt="King Suite" loading="lazy" />
-              <span class="room-badge">Suite</span>
+              <img src="https://res.cloudinary.com/djcgfqesd/image/upload/w_800,f_auto,q_auto/v1780503430/Queen_room_with_mobility_access_and_roll_in_shower_non_smoking_x8kegf.jpg" alt="Queen room with mobility access and roll-in shower, non-smoking" loading="lazy" />
+              <span class="room-badge">Accessible</span>
             </div>
             <div class="room-body">
-              <span class="room-type">Upgrade</span>
-              <h3 class="room-name">King Suite</h3>
-              <p class="room-desc">King bed with a separate sitting area, upgraded bath amenities, flat-screen HDTV, and generous space to unwind.</p>
+              <span class="room-type">Accessible</span>
+              <h3 class="room-name">Mobility Accessible Queen</h3>
+              <p class="room-desc">Queen bed in a non-smoking room with mobility access and a roll-in shower. Flat-screen HDTV, work desk, microwave, mini-fridge, and complimentary high-speed WiFi.</p>
               <div class="room-footer-row">
-                <span class="room-price">$129<small>/night</small></span>
                 <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="btn-sm-outline">Book Room</a>
               </div>
             </div>
@@ -212,16 +344,14 @@
 
           <div class="room-card js-reveal-right">
             <div class="room-img-wrap">
-              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=85" alt="Extended-Stay Kitchenette Suite" loading="lazy" />
-              <span class="room-badge">Pet Friendly</span>
+              <img src="https://res.cloudinary.com/djcgfqesd/image/upload/w_800,f_auto,q_auto/v1780503429/Queen_room_with_2_queen_beds_mobility_access_and_roll_in_shower_non_smoking_uue4zk.jpg" alt="Queen room with two queen beds, mobility access and roll-in shower, non-smoking" loading="lazy" />
             </div>
             <div class="room-body">
-              <span class="room-type">Extended Stay</span>
-              <h3 class="room-name">Kitchenette Suite</h3>
-              <p class="room-desc">Built for longer stays — kitchenette, extra storage, and all the comforts of home. Pet-friendly rooms available.</p>
+              <span class="room-type">Accessible</span>
+              <h3 class="room-name">Accessible Two Queen Beds</h3>
+              <p class="room-desc">Two queen beds in a non-smoking room with mobility access and a roll-in shower. Flat-screen HDTV, work desk, microwave, mini-fridge, and free high-speed WiFi throughout.</p>
               <div class="room-footer-row">
-                <span class="room-price">Call<small>for rate</small></span>
-                <a href="tel:+17017740424" class="btn-sm-outline">Call Direct</a>
+                <a href="https://www.wyndhamhotels.com/trademark/williston-north-dakota/roosevelt-hotel/overview" target="_blank" rel="noopener" class="btn-sm-outline">Book Room</a>
               </div>
             </div>
           </div>
@@ -235,19 +365,18 @@
       <div class="container">
         <div class="dining-grid">
           <div class="dining-img js-reveal-left">
-            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1000&q=85" alt="Roux restaurant dining" loading="lazy" />
-            <span class="dining-stamp">Roux</span>
+            <img src="https://res.cloudinary.com/djcgfqesd/image/upload/w_1000,f_auto,q_auto/v1780503424/Restaurant_place_to_eat_2_acqwif.jpg" alt="Breakfast dining area at the Roosevelt Hotel" loading="lazy" />
+            <span class="dining-stamp">Breakfast</span>
           </div>
           <div class="js-reveal-right">
             <span class="eyebrow">Dine With Us</span>
-            <h2 class="section-heading">Cajun Soul at <em>Roux</em></h2>
+            <h2 class="section-heading">Start Your Day <em>Right</em></h2>
             <p class="body-text">
-              Our on-site restaurant, Roux, brings authentic Cajun &amp; Creole cooking to the northern plains — soulful gumbo, jambalaya, and Southern comfort served for lunch and dinner. Start your morning with a complimentary hot breakfast buffet, and unwind in the evening at the bar.
+              Begin every morning with a complimentary hot breakfast buffet — fresh coffee, hearty favorites, and a comfortable place to fuel up before your day. It's included with every stay, so you're ready before you hit the road.
             </p>
             <ul class="check-list">
               <li>Complimentary hot breakfast buffet every morning</li>
-              <li>Cajun &amp; Creole lunch and dinner at Roux</li>
-              <li>Full-service bar &amp; evening manager's reception</li>
+              <li>Fresh coffee &amp; an inviting dining area</li>
               <li>In-room microwave, mini-fridge &amp; coffee maker</li>
             </ul>
             <a href="dining.html" class="btn-outline-gold">Explore Dining</a>
@@ -291,10 +420,10 @@
 
           <div class="amenity-card js-stagger">
             <div class="amenity-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
             </div>
-            <h3 class="amenity-name">Restaurant &amp; Bar</h3>
-            <p class="amenity-desc">Cajun &amp; Creole cuisine and handcrafted drinks at Roux, our on-site restaurant and bar, open daily.</p>
+            <h3 class="amenity-name">Free Parking</h3>
+            <p class="amenity-desc">Complimentary on-site parking right out front — plenty of space, with easy in-and-out for every guest.</p>
           </div>
 
           <div class="amenity-card js-stagger">
@@ -375,7 +504,7 @@
               <div class="review-card">
                 <div class="review-quote-mark">"</div>
                 <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">"A comfortable, friendly stay in Williston. The breakfast was hot and fresh every morning and the staff went out of their way to help. The Cajun food at Roux was a delicious surprise this far north."</p>
+                <p class="review-text">"A comfortable, friendly stay in Williston. The breakfast was hot and fresh every morning and the staff went out of their way to help. Clean room, easy parking, and a great spot for work in the Bakken."</p>
                 <div class="review-footer">
                   <div>
                     <span class="review-name">Sarah M.</span>
@@ -508,7 +637,7 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="index.html" class="footer-logo">Roosevelt</a>
+            <a href="index.html" class="footer-logo"><img src="assets/merlin-logo.png" alt="Merlin Group Hotels" class="footer-logo-img"></a>
             <span class="footer-sub">Trademark Collection by Wyndham</span>
             <p class="footer-tagline">"Where history meets hospitality — Williston's landmark hotel."</p>
             <div class="footer-socials">

@@ -3,12 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dining &amp; Roux — Roosevelt Hotel, Williston ND</title>
-  <meta name="description" content="Dine at Roux — authentic Cajun &amp; Creole cuisine — plus a complimentary breakfast buffet and full bar at the Roosevelt Hotel, Williston ND." />
+  <!-- ═══ SEO META TAGS ═══ -->
+  <title>Dining &amp; Breakfast — Roosevelt Hotel, Williston ND</title>
+  <meta name="description" content="Start every morning with a complimentary hot breakfast buffet and fresh coffee at the Roosevelt Hotel, Williston ND." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://hotelwilliston.com/dining" />
+
+  <!-- Geo (TODO: verify exact GPS coordinates for 1001 24th St W, Williston ND) -->
+  <meta name="geo.region" content="US-ND" />
+  <meta name="geo.placename" content="Williston, North Dakota" />
+  <meta name="geo.position" content="48.1614;-103.6469" />
+  <meta name="ICBM" content="48.1614, -103.6469" />
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Roosevelt Hotel" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hotelwilliston.com/dining" />
+  <meta property="og:title" content="Dining &amp; Breakfast — Roosevelt Hotel, Williston ND" />
+  <meta property="og:description" content="Start every morning with a complimentary hot breakfast buffet and fresh coffee at the Roosevelt Hotel, Williston ND." />
+  <meta property="og:image" content="https://res.cloudinary.com/djcgfqesd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1780503426/hero_image_outside_view_wider_zg9quq.avif" />
+  <meta property="og:image:alt" content="Roosevelt Hotel, Williston ND — breakfast" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dining &amp; Breakfast — Roosevelt Hotel, Williston ND" />
+  <meta name="twitter:description" content="Start every morning with a complimentary hot breakfast buffet and fresh coffee at the Roosevelt Hotel, Williston ND." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/djcgfqesd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1780503426/hero_image_outside_view_wider_zg9quq.avif" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#7a1d2b">
   <link rel="stylesheet" href="style.css">
+
+  <!-- ═══ STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hotelwilliston.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Dining & Breakfast", "item": "https://hotelwilliston.com/dining" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is breakfast free at the Roosevelt Hotel in Williston?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. A complimentary hot breakfast buffet is included with every stay at the Roosevelt Hotel, Williston ND, along with fresh coffee. Breakfast is served daily for all guests at no additional charge." }
+      },
+      {
+        "@type": "Question",
+        "name": "What time is breakfast served at the Roosevelt Hotel?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Breakfast is served every morning in the hotel's breakfast area. Please contact the front desk at +1 701-774-0424 to confirm current breakfast hours during your stay." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is coffee available throughout the day?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fresh coffee is available to guests, so you can grab a cup whenever you need one during your stay at the Roosevelt Hotel, Williston ND." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -25,7 +94,7 @@
     <!-- NAVBAR -->
     <header id="navbar" class="navbar">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Roosevelt</a>
+        <a href="index.html" class="nav-logo" aria-label="Merlin Group Hotels — Roosevelt Hotel"><img src="assets/merlin-logo.png" alt="Merlin Group Hotels" class="nav-logo-img"></a>
         <nav class="nav-links" id="nav-links">
           <a href="rooms.html" class="nav-link">Rooms</a>
           <a href="dining.html" class="nav-link">Dining</a>
@@ -52,12 +121,12 @@
 
     <!-- PAGE HERO -->
     <section class="page-hero">
-      <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=90');"></div>
+      <div class="page-hero-bg" style="background-image:url('https://res.cloudinary.com/djcgfqesd/image/upload/w_1920,f_auto,q_auto/v1780503424/Restaurant_place_to_eat_2_acqwif.jpg');"></div>
       <div class="page-hero-overlay"></div>
       <div class="page-hero-content">
         <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Dining</div>
-        <h1 class="page-hero-title">Dining at <em>Roux</em></h1>
-        <p class="page-hero-sub">Cajun &amp; Creole soul food on the northern plains — breakfast, lunch, dinner, and a full bar.</p>
+        <h1 class="page-hero-title">Dining &amp; <em>Breakfast</em></h1>
+        <p class="page-hero-sub">A complimentary hot breakfast buffet and fresh coffee to start every morning — included with your stay.</p>
       </div>
     </section>
 
@@ -66,17 +135,15 @@
       <div class="anchor-nav-inner">
         <a href="#overview" class="anchor-link"><span class="anchor-index">01</span> Overview</a>
         <a href="#breakfast" class="anchor-link"><span class="anchor-index">02</span> Breakfast</a>
-        <a href="#roux" class="anchor-link"><span class="anchor-index">03</span> Roux</a>
-        <a href="#bar" class="anchor-link"><span class="anchor-index">04</span> Bar</a>
-        <a href="#hours" class="anchor-link"><span class="anchor-index">05</span> Hours</a>
+        <a href="#hours" class="anchor-link"><span class="anchor-index">03</span> Hours</a>
       </div>
     </nav>
 
     <section id="overview" class="sec">
       <div class="container">
         <span class="eyebrow js-reveal-up">Dine With Us</span>
-        <h2 class="section-heading js-reveal-up" style="margin-bottom:1.5rem;">Food With <em>Soul</em></h2>
-        <p class="lede js-reveal-up">From a hot breakfast buffet to a plate of jambalaya at dinner, dining at the Roosevelt is comforting, generous, and a little unexpected this far north.</p>
+        <h2 class="section-heading js-reveal-up" style="margin-bottom:1.5rem;">A Warm <em>Welcome</em></h2>
+        <p class="lede js-reveal-up">Every stay begins with a complimentary hot breakfast buffet — comforting, generous, and the perfect way to start your day before heading out across the Bakken.</p>
         <span class="mock-note">Mockup section — full menus &amp; photography coming soon</span>
       </div>
     </section>
@@ -99,50 +166,13 @@
       </div>
     </section>
 
-    <section id="roux" class="sec">
-      <div class="container">
-        <div class="split">
-          <div class="js-reveal-left">
-            <span class="eyebrow">Lunch &amp; Dinner</span>
-            <h2 class="section-heading" style="margin-bottom:1rem;">Cajun &amp; Creole at <em>Roux</em></h2>
-            <p class="body-text">Roux brings Louisiana flavor to Williston — gumbo, jambalaya, blackened specialties, and Southern comfort served for lunch and dinner. Placeholder copy to be replaced with the full menu.</p>
-            <ul class="check-list">
-              <li>Authentic Cajun &amp; Creole dishes</li>
-              <li>Open for lunch and dinner</li>
-              <li>Dine in or order to your room</li>
-            </ul>
-          </div>
-          <div class="split-img js-reveal-right"><img src="https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=1000&q=85" alt="Cajun cuisine" loading="lazy" /></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="bar" class="sec sec--alt">
-      <div class="container">
-        <div class="split">
-          <div class="split-img js-reveal-left"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1000&q=85" alt="Hotel bar" loading="lazy" /></div>
-          <div class="js-reveal-right">
-            <span class="eyebrow">Unwind</span>
-            <h2 class="section-heading" style="margin-bottom:1rem;">The <em>Bar</em></h2>
-            <p class="body-text">Settle in for a handcrafted drink at our full-service bar, and join us for the evening manager's reception. Placeholder copy to be replaced.</p>
-            <ul class="check-list">
-              <li>Full-service bar</li>
-              <li>Evening manager's reception</li>
-              <li>Relaxed, welcoming atmosphere</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="hours" class="sec sec--dark">
       <div class="container">
         <span class="eyebrow js-reveal-up">Plan Your Visit</span>
         <h2 class="section-heading js-reveal-up">Dining <em>Hours</em></h2>
         <div class="card-grid">
-          <div class="info-card"><div class="info-card-num">01</div><h3>Breakfast</h3><p>Served every morning. Exact hours to be confirmed — placeholder.</p></div>
-          <div class="info-card"><div class="info-card-num">02</div><h3>Roux — Lunch &amp; Dinner</h3><p>Open daily for lunch and dinner. Hours to be confirmed — placeholder.</p></div>
-          <div class="info-card"><div class="info-card-num">03</div><h3>Bar</h3><p>Evening service. Hours to be confirmed — placeholder.</p></div>
+          <div class="info-card"><div class="info-card-num">01</div><h3>Breakfast</h3><p>Served fresh every morning. Exact hours to be confirmed — placeholder.</p></div>
+          <div class="info-card"><div class="info-card-num">02</div><h3>Coffee</h3><p>Fresh coffee available in the lobby. Hours to be confirmed — placeholder.</p></div>
         </div>
         <span class="mock-note">Mockup section — confirmed hours coming soon</span>
       </div>
@@ -153,7 +183,7 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="index.html" class="footer-logo">Roosevelt</a>
+            <a href="index.html" class="footer-logo"><img src="assets/merlin-logo.png" alt="Merlin Group Hotels" class="footer-logo-img"></a>
             <span class="footer-sub">Trademark Collection by Wyndham</span>
             <p class="footer-tagline">"Where history meets hospitality — Williston's landmark hotel."</p>
             <div class="footer-socials">

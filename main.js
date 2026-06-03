@@ -171,27 +171,47 @@ function animateCounters() {
    GALLERY LIGHTBOX
 ============================== */
 function initGallery() {
-  const lightbox    = $('#lightbox');
-  const lightboxImg = $('#lightbox-img');
-  if (!lightbox || !lightboxImg) return;
+  const photos   = window.GALLERY_PHOTOS;
+  const triggers = $$('[data-gallery-open]');
+  if (!photos || !photos.length || !triggers.length) return;
 
-  $$('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const src = item.dataset.src || item.querySelector('img').src;
-      lightboxImg.src = src;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-  });
+  // build the lightbox overlay once
+  const lb = document.createElement('div');
+  lb.className = 'lb';
+  lb.innerHTML =
+    '<button class="lb-close" aria-label="Close gallery">&#10005;</button>' +
+    '<button class="lb-nav lb-prev" aria-label="Previous photo">&#8249;</button>' +
+    '<figure class="lb-stage"><img class="lb-img" src="" alt="" /><figcaption class="lb-cap"></figcaption></figure>' +
+    '<button class="lb-nav lb-next" aria-label="Next photo">&#8250;</button>' +
+    '<div class="lb-count"></div>';
+  document.body.appendChild(lb);
 
-  window.closeLightbox = function () {
-    lightbox.classList.remove('active');
-    lightboxImg.src = '';
-    document.body.style.overflow = '';
-  };
+  const img   = lb.querySelector('.lb-img');
+  const cap   = lb.querySelector('.lb-cap');
+  const count = lb.querySelector('.lb-count');
+  let idx = 0;
+
+  function show(i) {
+    idx = (i % photos.length + photos.length) % photos.length;
+    img.src = photos[idx].src;
+    img.alt = photos[idx].cap || '';
+    cap.textContent = photos[idx].cap || '';
+    count.textContent = (idx + 1) + ' / ' + photos.length;
+  }
+  function open(i) { show(i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function close() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+
+  triggers.forEach(t => t.addEventListener('click', () => open(parseInt(t.dataset.galleryOpen || '0', 10))));
+  lb.querySelector('.lb-close').addEventListener('click', close);
+  lb.querySelector('.lb-prev').addEventListener('click', () => show(idx - 1));
+  lb.querySelector('.lb-next').addEventListener('click', () => show(idx + 1));
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeLightbox();
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(idx - 1);
+    else if (e.key === 'ArrowRight') show(idx + 1);
   });
 }
 

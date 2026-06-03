@@ -1,0 +1,10 @@
+{
+  "name": "roosevelt-hotel-williston",
+  "version": "1.0.0",
+  "description": "Roosevelt Hotel, Williston ND — static marketing site (Trademark Collection by Wyndham).",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

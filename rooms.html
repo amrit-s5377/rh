@@ -3,12 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ═══ SEO META TAGS ═══ -->
   <title>Rooms &amp; Suites — Roosevelt Hotel, Williston ND</title>
-  <meta name="description" content="Rooms and suites at the Roosevelt Hotel, Williston ND — Queen, Double Queen, King Suite, and extended-stay kitchenette suites. Trademark Collection by Wyndham." />
+  <meta name="description" content="Rooms and suites at the Roosevelt Hotel, Williston ND — Queen, Double Queen, and King Suite. Trademark Collection by Wyndham." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://hotelwilliston.com/rooms" />
+
+  <!-- Geo (TODO: verify exact GPS coordinates for 1001 24th St W, Williston ND) -->
+  <meta name="geo.region" content="US-ND" />
+  <meta name="geo.placename" content="Williston, North Dakota" />
+  <meta name="geo.position" content="48.1614;-103.6469" />
+  <meta name="ICBM" content="48.1614, -103.6469" />
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Roosevelt Hotel" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hotelwilliston.com/rooms" />
+  <meta property="og:title" content="Rooms &amp; Suites — Roosevelt Hotel, Williston ND" />
+  <meta property="og:description" content="Queen, Double Queen, and King Suite rooms at the Roosevelt Hotel, Williston ND. From $79/night. Trademark Collection by Wyndham." />
+  <meta property="og:image" content="https://res.cloudinary.com/djcgfqesd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1780503426/hero_image_outside_view_wider_zg9quq.avif" />
+  <meta property="og:image:alt" content="Roosevelt Hotel, Williston ND — guest rooms" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rooms &amp; Suites — Roosevelt Hotel, Williston ND" />
+  <meta name="twitter:description" content="Queen, Double Queen, and King Suite rooms at the Roosevelt Hotel, Williston ND. From $79/night. Trademark Collection by Wyndham." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/djcgfqesd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1780503426/hero_image_outside_view_wider_zg9quq.avif" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#7a1d2b">
   <link rel="stylesheet" href="style.css">
+
+  <!-- ═══ STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HotelRoom",
+        "name": "Queen Room",
+        "description": "Comfortable Queen room at the Roosevelt Hotel, Williston ND, with free WiFi, flat-screen TV, microwave, and refrigerator.",
+        "containedInPlace": { "@type": "Hotel", "@id": "https://hotelwilliston.com/#hotel", "name": "Roosevelt Hotel", "telephone": "+17017740424" },
+        "offers": { "@type": "Offer", "price": "79", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "Double Queen Room",
+        "description": "Double Queen room at the Roosevelt Hotel, Williston ND, ideal for families or sharing crews. Free WiFi, flat-screen TV, microwave, and refrigerator.",
+        "containedInPlace": { "@type": "Hotel", "@id": "https://hotelwilliston.com/#hotel", "name": "Roosevelt Hotel", "telephone": "+17017740424" },
+        "offers": { "@type": "Offer", "price": "99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "King Suite",
+        "description": "Spacious King Suite at the Roosevelt Hotel, Williston ND, with a separate living area, free WiFi, flat-screen TV, microwave, and refrigerator.",
+        "containedInPlace": { "@type": "Hotel", "@id": "https://hotelwilliston.com/#hotel", "name": "Roosevelt Hotel", "telephone": "+17017740424" },
+        "offers": { "@type": "Offer", "price": "129", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hotelwilliston.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Rooms & Suites", "item": "https://hotelwilliston.com/rooms" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -25,7 +95,7 @@
     <!-- NAVBAR -->
     <header id="navbar" class="navbar">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Roosevelt</a>
+        <a href="index.html" class="nav-logo" aria-label="Merlin Group Hotels — Roosevelt Hotel"><img src="assets/merlin-logo.png" alt="Merlin Group Hotels" class="nav-logo-img"></a>
         <nav class="nav-links" id="nav-links">
           <a href="rooms.html" class="nav-link">Rooms</a>
           <a href="dining.html" class="nav-link">Dining</a>
@@ -68,8 +138,7 @@
         <a href="#queen" class="anchor-link"><span class="anchor-index">02</span> Queen</a>
         <a href="#double" class="anchor-link"><span class="anchor-index">03</span> Double Queen</a>
         <a href="#king" class="anchor-link"><span class="anchor-index">04</span> King Suite</a>
-        <a href="#extended" class="anchor-link"><span class="anchor-index">05</span> Extended Stay</a>
-        <a href="#policies" class="anchor-link"><span class="anchor-index">06</span> Policies</a>
+        <a href="#policies" class="anchor-link"><span class="anchor-index">05</span> Policies</a>
       </div>
     </nav>
 
@@ -115,7 +184,7 @@
               <li>Complimentary high-speed WiFi</li>
             </ul>
           </div>
-          <div class="split-img js-reveal-right"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1000&q=85" alt="Double Queen Room" loading="lazy" /></div>
+          <div class="split-img js-reveal-right"><img src="https://res.cloudinary.com/djcgfqesd/image/upload/w_1000,f_auto,q_auto/v1780503429/Queen_room_with_2_queen_beds_non_smoking_kiubvg.jpg" alt="Double Queen Room — two queen beds" loading="lazy" /></div>
         </div>
       </div>
     </section>
@@ -139,26 +208,6 @@
       </div>
     </section>
 
-    <section id="extended" class="sec">
-      <div class="container">
-        <div class="split">
-          <div class="js-reveal-left">
-            <span class="eyebrow">Extended Stay · Call for rate</span>
-            <h2 class="section-heading" style="margin-bottom:1rem;">Kitchenette <em>Suite</em></h2>
-            <p class="body-text">Built for longer stays — a kitchenette, extra storage, and the comforts of home. Pet-friendly rooms available. Call our front desk for weekly, monthly, and crew-block rates.</p>
-            <ul class="check-list">
-              <li>In-room kitchenette</li>
-              <li>Weekly &amp; monthly rates available</li>
-              <li>Pet-friendly (select rooms, fee may apply)</li>
-              <li>Direct billing for corporate &amp; agencies</li>
-            </ul>
-            <a href="tel:+17017740424" class="btn-outline-gold">Call (701) 774-0424</a>
-          </div>
-          <div class="split-img js-reveal-right"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1000&q=85" alt="Extended-stay kitchenette suite" loading="lazy" /></div>
-        </div>
-      </div>
-    </section>
-
     <section id="policies" class="sec sec--dark">
       <div class="container">
         <span class="eyebrow js-reveal-up">Good to Know</span>
@@ -177,7 +226,7 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="index.html" class="footer-logo">Roosevelt</a>
+            <a href="index.html" class="footer-logo"><img src="assets/merlin-logo.png" alt="Merlin Group Hotels" class="footer-logo-img"></a>
             <span class="footer-sub">Trademark Collection by Wyndham</span>
             <p class="footer-tagline">"Where history meets hospitality — Williston's landmark hotel."</p>
             <div class="footer-socials">
