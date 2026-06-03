@@ -2038,3 +2038,84 @@ section[id],
   .explore-grid { grid-template-columns: 1fr; }
   .audience, .explore, .faq { padding: 5rem 0; }
 }
+
+/* ===================================================================
+   ENQUIRY FORM  ·  success / error states (Web3Forms)
+   =================================================================== */
+.form-success,
+.form-error {
+  margin-top: 1rem;
+  padding: 0.9rem 1.1rem;
+  font-family: var(--body);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  border: 1px solid;
+}
+.form-success {
+  color: #1f5130;
+  background: rgba(31, 81, 48, 0.08);
+  border-color: rgba(31, 81, 48, 0.35);
+}
+.form-error {
+  color: var(--gold);
+  background: rgba(122, 29, 43, 0.07);
+  border-color: rgba(122, 29, 43, 0.35);
+}
+
+/* ===================================================================
+   ENQUIRY CTA BAND  ·  above the footer on every page
+   =================================================================== */
+.cta-band { background: var(--gold); padding: 5rem 0; overflow: hidden; }
+.cta-band-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.cta-band-eyebrow {
+  display: block;
+  font-family: var(--body);
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 238, 0.72);
+  margin-bottom: 0.9rem;
+}
+.cta-band-title {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--cream);
+  margin-bottom: 0.6rem;
+}
+.cta-band-text {
+  font-family: var(--body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(247, 244, 238, 0.82);
+  max-width: 520px;
+}
+.cta-band-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2.2rem;
+  background: var(--cream);
+  color: var(--gold);
+  font-family: var(--body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--cream);
+  transition: background 0.3s, color 0.3s;
+}
+.cta-band-btn:hover { background: transparent; color: var(--cream); }
+.cta-band-btn svg { width: 15px; height: 15px; }
+@media (max-width: 640px) {
+  .cta-band { padding: 3.5rem 0; }
+  .cta-band-btn { width: 100%; justify-content: center; }
+}

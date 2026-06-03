@@ -158,34 +158,86 @@
             <div class="loc-detail"><span class="loc-label">Phone</span><span class="loc-value"><a href="tel:+17017740424">+1 701-774-0424</a></span></div>
           </div>
 
-          <form class="js-reveal-right" onsubmit="return false;" aria-label="Contact form">
+          <form id="enquiryForm" class="js-reveal-right" novalidate aria-label="Enquiry form">
+            <input type="hidden" name="access_key" value="5e5f37f4-6df9-47b2-b97b-10852dd47b52" />
+            <input type="hidden" name="subject" value="Guest Enquiry — Roosevelt Hotel, Williston ND" />
+            <input type="hidden" name="from_name" value="Roosevelt Hotel Website" />
+            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
             <div class="form-row">
-              <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" placeholder="Your name" /></div>
-              <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" placeholder="you@email.com" /></div>
+              <div class="field"><label for="f-name">Name <span aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" placeholder="Your name" required autocomplete="name" /></div>
+              <div class="field"><label for="f-email">Email <span aria-hidden="true">*</span></label><input id="f-email" name="email" type="email" placeholder="you@email.com" required autocomplete="email" /></div>
             </div>
             <div class="form-row">
-              <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" placeholder="(701) 000-0000" /></div>
-              <div class="field"><label for="f-type">Enquiry Type</label>
-                <select id="f-type">
+              <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" placeholder="(701) 000-0000" autocomplete="tel" /></div>
+              <div class="field"><label for="f-type">Enquiry Type <span aria-hidden="true">*</span></label>
+                <select id="f-type" name="enquiry_type" required>
+                  <option value="" disabled selected>Select a topic…</option>
                   <option>Nightly stay</option>
-                  <option>Weekly / monthly rate</option>
                   <option>Group / crew block</option>
                   <option>Meeting / event</option>
+                  <option>Accessibility request</option>
                   <option>Other</option>
                 </select>
               </div>
             </div>
             <div class="form-row">
-              <div class="field"><label for="f-in">Check-in</label><input id="f-in" type="date" /></div>
-              <div class="field"><label for="f-out">Check-out</label><input id="f-out" type="date" /></div>
+              <div class="field"><label for="f-in">Check-in</label><input id="f-in" name="checkin" type="date" /></div>
+              <div class="field"><label for="f-out">Check-out</label><input id="f-out" name="checkout" type="date" /></div>
             </div>
-            <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" placeholder="Tell us how we can help…"></textarea></div>
-            <button type="submit" class="form-submit">Send Enquiry</button>
-            <p class="sidebar-wyndham-note" style="text-align:left;color:var(--fg-muted);font-size:0.68rem;margin-top:0.75rem;">Mockup form — not yet wired to a backend. Connect to Formspree/Netlify Forms later.</p>
+            <div class="field"><label for="f-msg">Message <span aria-hidden="true">*</span></label><textarea id="f-msg" name="message" placeholder="Tell us how we can help…" required></textarea></div>
+            <button type="submit" class="form-submit" id="enqSubmitBtn">Send Enquiry</button>
+            <div class="form-success" id="enqSuccess" role="status" aria-live="polite" hidden>✓ Thank you! Your enquiry has been sent — we'll get back to you within a few hours.</div>
+            <div class="form-error" id="enqError" role="alert" aria-live="polite" hidden><span id="enqErrorMsg">Something went wrong. Please try again or call us at +1 701-774-0424.</span></div>
           </form>
         </div>
       </div>
     </section>
+
+    <script>
+    (function () {
+      var form = document.getElementById('enquiryForm');
+      if (!form) return;
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var btn = document.getElementById('enqSubmitBtn');
+        var successEl = document.getElementById('enqSuccess');
+        var errorEl = document.getElementById('enqError');
+        var errorMsg = document.getElementById('enqErrorMsg');
+
+        if (!form.checkValidity()) {
+          var firstInvalid = form.querySelector(':invalid');
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        successEl.hidden = true;
+        errorEl.hidden = true;
+
+        try {
+          var res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: new FormData(form)
+          });
+          var data = await res.json();
+          if (data.success) {
+            successEl.hidden = false;
+            form.reset();
+          } else {
+            errorMsg.textContent = data.message || 'Something went wrong. Please try again or call us at +1 701-774-0424.';
+            errorEl.hidden = false;
+          }
+        } catch (err) {
+          errorMsg.textContent = 'Network error. Please check your connection and try again, or call +1 701-774-0424.';
+          errorEl.hidden = false;
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'Send Enquiry';
+        }
+      });
+    }());
+    </script>
 
     <!-- LOCATION -->
     <section id="location" class="location" style="padding-top:6rem;">
@@ -232,6 +284,22 @@
           <div class="info-card"><div class="info-card-num">01</div><h3>Front Desk</h3><p>Open 24 hours — someone's always here to help.</p></div>
           <div class="info-card"><div class="info-card-num">02</div><h3>Check-in / out</h3><p>Check-in from 3:00 PM, check-out by 11:00 AM.</p></div>
           <div class="info-card"><div class="info-card-num">03</div><h3>Smoke-Free</h3><p>The Roosevelt is a 100% smoke-free property.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENQUIRY CTA -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band-inner js-reveal-up">
+          <div>
+            <span class="cta-band-eyebrow">Get in Touch</span>
+            <h2 class="cta-band-title">Have a Question or Special Request?</h2>
+            <p class="cta-band-text">Tell us what you need — group rates, accessibility, meetings, or anything else — and our team will get back to you within a few hours.</p>
+          </div>
+          <a href="#enquiry" class="cta-band-btn">Send an Enquiry
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
         </div>
       </div>
     </section>
