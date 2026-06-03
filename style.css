@@ -304,7 +304,7 @@ ul { list-style: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://res.cloudinary.com/djcgfqesd/image/upload/v1780503426/hero_image_outside_view_wider_zg9quq.avif');
+  background-image: url('https://res.cloudinary.com/djcgfqesd/image/upload/f_auto,q_auto/v1780509938/Hero_image_outer_view_dpza9t.png');
   background-size: cover;
   background-position: center 30%;
   transform: scale(1.08);
@@ -1923,4 +1923,118 @@ section[id],
   .card-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .page-hero { min-height: 42vh; }
+}
+
+/* ===================================================================
+   AUDIENCE  ·  "Who Stays With Us"  (reuses .amenities-grid/.amenity-card)
+   =================================================================== */
+.audience { padding: 8rem 0; background: var(--sand); overflow: hidden; }
+.audience-tagline {
+  max-width: 640px;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--clay);
+}
+
+/* ===================================================================
+   EXPLORE WILLISTON  ·  local-attraction cards (dark band)
+   =================================================================== */
+.explore { padding: 8rem 0; background: var(--ink); overflow: hidden; }
+.explore .eyebrow { color: var(--gold-soft); }
+.explore .section-heading { color: var(--cream); }
+.explore .section-heading em { color: var(--gold-soft); }
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.explore-card {
+  background: var(--ink2);
+  border: 1px solid rgba(247, 244, 238, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.explore-img { position: relative; height: 200px; overflow: hidden; }
+.explore-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.explore-card:hover .explore-img img { transform: scale(1.05); }
+.explore-dist {
+  position: absolute;
+  top: 0.85rem; left: 0.85rem;
+  background: var(--gold);
+  color: var(--cream);
+  font-family: var(--body);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+}
+.explore-body { padding: 1.5rem 1.5rem 1.8rem; }
+.explore-name {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--cream);
+  margin-bottom: 0.6rem;
+}
+.explore-desc {
+  font-family: var(--body);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--on-dark-mut);
+}
+
+/* ===================================================================
+   FAQ  ·  on-page accordion (native <details>)
+   =================================================================== */
+.faq { padding: 8rem 0; background: var(--cream); overflow: hidden; }
+.faq-list { max-width: 820px; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--ink);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-family: var(--body);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-a {
+  padding: 0 0 1.6rem;
+  max-width: 92%;
+  font-family: var(--body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--clay);
+}
+
+@media (max-width: 900px) {
+  .explore-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .explore-grid { grid-template-columns: 1fr; }
+  .audience, .explore, .faq { padding: 5rem 0; }
 }
