@@ -211,19 +211,21 @@ ul { list-style: none; }
 .nav-reserve {
   flex-shrink: 0;
   display: inline-block;
-  padding: 0.65rem 1.4rem;
+  padding: 0.7rem 1.5rem;
   font-family: var(--body);
   font-size: 0.68rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--cream);
-  border: 1px solid rgba(247,244,238,0.6);
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  box-shadow: 0 8px 24px -12px rgba(122,29,43,0.7);
+  transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
 }
-.nav-reserve:hover { background: var(--gold); border-color: var(--gold); color: var(--cream); }
-.navbar.scrolled .nav-reserve { color: var(--gold); border-color: var(--gold); }
-.navbar.scrolled .nav-reserve:hover { background: var(--gold); color: var(--cream); }
+.nav-reserve:hover { background: var(--gold-soft); border-color: var(--gold-soft); color: #fff; transform: translateY(-1px); }
+.navbar.scrolled .nav-reserve { color: var(--cream); border-color: var(--gold); }
+.navbar.scrolled .nav-reserve:hover { background: var(--gold-soft); border-color: var(--gold-soft); color: #fff; }
 
 .nav-hamburger {
   display: none;
@@ -1314,20 +1316,6 @@ ul { list-style: none; }
   margin-bottom: 1.75rem;
 }
 
-.footer-socials { display: flex; gap: 0.65rem; }
-
-.social-link {
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgba(247,244,238,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--on-dark-mut);
-  transition: border-color 0.3s, color 0.3s;
-}
-.social-link:hover { border-color: var(--gold-soft); color: var(--gold-soft); }
-
 .footer-col-title {
   display: block;
   font-family: var(--body);
@@ -1409,6 +1397,22 @@ ul { list-style: none; }
 .js-reveal-right { opacity: 0; transform: translateX(50px); }
 .js-stagger    { opacity: 0; transform: translateY(35px); }
 
+/* Reduced motion: show everything, no scroll-driven animation */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .site-hidden { opacity: 1; }
+  .js-fade-up, .js-reveal-up, .js-reveal-left, .js-reveal-right, .js-stagger {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* ===========================
    RESPONSIVE
 =========================== */
@@ -1473,6 +1477,74 @@ ul { list-style: none; }
 }
 .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .back-to-top:hover { background: var(--gold-soft); transform: translateY(-3px); }
+
+/* ===========================
+   STICKY MOBILE BOOKING BAR
+=========================== */
+.book-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 250;
+  display: none;            /* desktop hidden — shown on mobile below */
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 1.1rem;
+  padding-bottom: calc(0.7rem + env(safe-area-inset-bottom, 0px));
+  background: rgba(22,22,26,0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(247,244,238,0.12);
+  transform: translateY(110%);
+  transition: transform 0.35s ease;
+}
+.book-bar.visible { transform: translateY(0); }
+.book-bar-price {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  color: var(--cream);
+  line-height: 1.1;
+}
+.book-bar-unit { font-size: 0.72rem; color: var(--on-dark-mut); }
+.book-bar-meta {
+  display: block;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--on-dark-mut);
+  margin-top: 0.15rem;
+}
+.book-bar-actions { display: flex; align-items: center; gap: 0.55rem; flex-shrink: 0; }
+.book-bar-call {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  border: 1px solid rgba(247,244,238,0.3);
+  border-radius: 2px;
+}
+.book-bar-btn {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  background: var(--gold);
+  color: var(--cream);
+  font-family: var(--body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+/* Show the booking bar on phones only */
+@media (max-width: 760px) {
+  .book-bar { display: flex; }
+  .back-to-top { bottom: 5.5rem; }   /* clear the booking bar */
+}
 
 /* ===========================
    STICKY ANCHOR NAV

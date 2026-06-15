@@ -9,6 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 function $(sel, ctx) { return (ctx || document).querySelector(sel); }
 function $$(sel, ctx) { return [...(ctx || document).querySelectorAll(sel)]; }
 
+/* Respect users who ask for reduced motion */
+const REDUCED_MOTION = window.matchMedia &&
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 /* ==============================
    LOADER — shows only once per session
 ============================== */
@@ -20,7 +24,7 @@ function runLoader() {
   const alreadyShown = sessionStorage.getItem('rh_loader_shown');
 
   function revealSite() {
-    loader.style.display = 'none';
+    if (loader) loader.style.display = 'none';
     site.classList.remove('site-hidden');
     site.classList.add('site-visible');
     initHeroAnimations();
@@ -28,8 +32,9 @@ function runLoader() {
     initCarousel();
   }
 
-  if (alreadyShown) {
-    /* Skip loader on subsequent visits within the same session */
+  /* No loader element, reduced motion, or already seen this session:
+     paint the hero immediately — visitors want info fast. */
+  if (!loader || !bar || REDUCED_MOTION || alreadyShown) {
     revealSite();
     return;
   }
@@ -37,8 +42,8 @@ function runLoader() {
   sessionStorage.setItem('rh_loader_shown', '1');
 
   const tl = gsap.timeline({ onComplete: revealSite });
-  tl.to(bar,    { width: '100%', duration: 2.4, ease: 'power2.inOut' })
-    .to(loader, { clipPath: 'inset(100% 0 0 0)', duration: 0.9, ease: 'power3.inOut' }, '-=0.1');
+  tl.to(bar,    { width: '100%', duration: 0.7, ease: 'power2.inOut' })
+    .to(loader, { autoAlpha: 0, duration: 0.35, ease: 'power2.out' }, '-=0.05');
 }
 
 /* ==============================
@@ -67,6 +72,11 @@ window.closeMobile = function () {
    HERO ANIMATIONS
 ============================== */
 function initHeroAnimations() {
+  if (REDUCED_MOTION) {
+    gsap.set('.hero-badge, .hero-title, .hero-subtitle, .hero-ctas, .hero-stats, .scroll-hint', { opacity: 1, y: 0 });
+    return;
+  }
+
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
   tl.to('.hero-badge',    { opacity: 1, y: 0, duration: 0.75 }, 0.1)
@@ -93,6 +103,18 @@ function initHeroAnimations() {
    SCROLL ANIMATIONS
 ============================== */
 function initScrollAnimations() {
+
+  if (REDUCED_MOTION) {
+    /* Snap everything to its final, visible state — no scroll-driven motion */
+    gsap.set('.js-reveal-up, .js-reveal-left, .js-reveal-right, .js-stagger, .room-card', { opacity: 1, x: 0, y: 0 });
+    $$('.stat-number').forEach(el => {
+      const suffix  = el.dataset.suffix  || '';
+      const decimal = parseInt(el.dataset.decimal || '0');
+      const target  = parseFloat(el.dataset.target);
+      el.textContent = (decimal > 0 ? target.toFixed(decimal) : target) + suffix;
+    });
+    return;
+  }
 
   $$('.js-reveal-up').forEach(el => {
     gsap.to(el, {
@@ -256,6 +278,7 @@ window.carouselPrev = function () { stopAutoplay(); updateCarousel(carouselIndex
 window.carouselNext = function () { stopAutoplay(); updateCarousel(carouselIndex + 1); startAutoplay(); };
 
 function startAutoplay() {
+  if (REDUCED_MOTION) return;   /* no auto-advancing motion */
   carouselTimer = setInterval(() => updateCarousel(carouselIndex + 1), 5000);
 }
 function stopAutoplay() {
@@ -342,6 +365,26 @@ window.scrollToTop = function () {
 };
 
 /* ==============================
+   STICKY MOBILE BOOKING BAR
+============================== */
+function initBookBar() {
+  const bar = $('#book-bar');
+  if (!bar) return;
+
+  /* Reveal once the visitor scrolls past the first viewport so it doesn't
+     cover the hero CTAs, and tuck it away near the very bottom (footer). */
+  function update() {
+    const y = window.scrollY;
+    const nearBottom = (window.innerHeight + y) >= (document.body.offsetHeight - 160);
+    bar.classList.toggle('visible', y > 480 && !nearBottom);
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+}
+
+/* ==============================
    FOOTER YEAR
 ============================== */
 function setYear() {
@@ -358,6 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGallery();
   initDragScroll();
   initBackToTop();
+  initBookBar();
   initAnchorNav();
   runLoader();
 });
