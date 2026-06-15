@@ -154,20 +154,67 @@ ul { list-style: none; }
 .nav-logo {
   display: inline-flex;
   align-items: center;
+  gap: 0.6rem;
   flex-shrink: 0;
 }
-.nav-logo-text {
+
+/* ---- Logo lockup: monogram crest + stacked wordmark ---- */
+.logo-crest {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  color: var(--on-dark);            /* over the dark hero */
+  transition: color 0.4s ease;
+}
+.logo-crest::after {
+  content: '';
+  position: absolute;
+  inset: 3.5px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  opacity: 0.4;
+}
+.logo-crest-letter {
   font-family: var(--display);
-  font-size: 1.45rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
+  font-size: 1.2rem;
+  font-weight: 600;
   line-height: 1;
-  /* white wordmark over the dark hero (transparent navbar) */
+  transform: translateY(0.5px);
+}
+
+.logo-lockup {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-name {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--on-dark);
   transition: color 0.4s ease;
 }
+.logo-sub {
+  margin-top: 4px;
+  font-family: var(--body);
+  font-size: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--on-dark-mut);
+  transition: color 0.4s ease;
+}
+
 /* deep wine once the light scrolled bar appears */
-.navbar.scrolled .nav-logo-text { color: var(--gold); }
+.navbar.scrolled .logo-crest { color: var(--gold); }
+.navbar.scrolled .logo-name  { color: var(--gold); }
+.navbar.scrolled .logo-sub   { color: var(--clay); }
 
 .nav-links {
   display: flex;
@@ -1284,18 +1331,21 @@ ul { list-style: none; }
 .footer-brand { max-width: 280px; }
 
 .footer-logo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
   margin-bottom: 0.9rem;
 }
-.footer-logo-text {
-  font-family: var(--display);
-  font-size: 1.6rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1;
-  /* light wordmark on the dark footer */
+.footer-logo .logo-crest {
+  width: 44px;
+  height: 44px;
+  color: var(--gold-soft);          /* rose ring on the dark footer */
+}
+.footer-logo .logo-name {
+  font-size: 1.5rem;
   color: var(--on-dark);
 }
+.footer-logo .logo-sub { color: var(--on-dark-mut); }
 
 .footer-sub {
   display: block;
